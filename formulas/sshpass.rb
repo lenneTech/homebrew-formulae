@@ -1,13 +1,16 @@
-# Inspired by https://github.com/kadwanev/bigboybrew/blob/master/Library/Formula/sshpass.rb
+# Inspired by https://github.com/esolitos/homebrew-ipa/blob/master/Formula/sshpass.rb
 require 'formula'
 
 class Sshpass < Formula
-  url 'http://sourceforge.net/projects/sshpass/files/sshpass/1.09/sshpass-1.09.tar.gz'
-  homepage 'http://sourceforge.net/projects/sshpass'
-  sha256 'cbc0e1300c7f1cacf9c850e5b42773cb53211d9d'
+  url 'https://sourceforge.net/projects/sshpass/files/sshpass/1.09/sshpass-1.09.tar.gz'
+  homepage 'https://sourceforge.net/projects/sshpass'
+  sha256 '71746e5e057ffe9b00b44ac40453bf47091930cba96bbea8dc48717dedc49fb7'
+
+  depends_on 'gnu-sed'
 
   def install
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
                           "--prefix=#{prefix}"
     system "make install"
   end
