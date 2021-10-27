@@ -5,7 +5,9 @@ Formulas for installing non-official [homebrew](https://brew.sh/) packages.
 [sshpass](http://manpages.ubuntu.com/manpages/trusty/man1/sshpass.1.html) is a noninteractive ssh password provider.  
 
 ### brew
-`brew install https://raw.githubusercontent.com/lenneTech/homebrew-formulas/main/formulas/sshpass.rb`  
+```
+brew install https://raw.githubusercontent.com/lenneTech/homebrew-formulas/main/formulas/sshpass.rb
+```  
 Inspired by https://github.com/kadwanev/bigboybrew/blob/master/Library/Formula/sshpass.rb
 
 ### Hints
